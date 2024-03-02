@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips</title>
+    <style>
+        body {
+            font-family: 'Gotham', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .trip {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .trip img {
+            max-width: 200px;
+            max-height: 150px;
+            margin-right: 20px;
+        }
+        .trip-details {
+            flex: 1;
+        }
+        h2, p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Featured Trips</h1>
+    
+    <div class="trip">
+        <img src="..." alt="Orlando">
+        <div class="trip-details">
+            <h2>Orlando February 15-19</h2>
+            <p>
+                In partnership with Give Kids the World, students will serve and support families with children suffering from 
+                life-threatening illnesses who are enjoying their Make-a-Wish trip to Disney World. After our days of service, 
+                we will have fun at Epcot and the Magic Kingdom.
+
+                Service-learning travel challenges you to get out of your comfort zone, experience a different part of the country, 
+                personally grow and reflect, and make a significant difference for others. And, you will have a great time doing it 
+                with friends - old and new! 
+                
+                We are confident that this trip will challenge you to learn and grow as a person while you also serve families at 
+                Give Kids the World Village.
+                
+            </p>
+            <p>Please click below for more information and to express your interest in SaLTinORLANDO. </p>
+            <button onclick="alert('https://docs.google.com/document/d/1TQh6qAi_5TSMMXYT86XF-ATfQnD3F1rjDLWRtkGTO5g/edit?usp=sharing')">More Information</button>
+            <button onclick="alert('https://docs.google.com/forms/d/e/1FAIpQLSf405q1vQm4gSXQIEUSI0ma5Pqz9ZoJvbpLVV20OQgM2Afb9Q/viewform')">Book SaLTinORLANDO</button>
+        </div>
+    </div>
+
+    <div class="trip">
+        <img src="..." alt="New Orleans">
+        <div class="trip-details">
+            <h2>New Orleans March 23-29</h2>
+            <p>In New Orleans, students will work with leading nonprofits Sankofa, Green Light New Orleans,
+                and Youth Rebuilding New Orleans to help restore and learn about the community, culture, and 
+                environment of one of our country's most beloved cities. After our days of service, we will 
+                enjoy the music, food, sights, and excitement of the Big Easy. 
+
+                Service-learning travel challenges you to get out of your comfort zone, experience a different 
+                part of the country, personally grow and reflect, and make a significant difference for others. 
+                And, you will have a great time doing it with friends - old and new!
+                
+                We are confident that this trip will challenge you to learn and grow as a person while you also
+                 serve the communities of New Orleans.</p>
+            <p>Please click below for more information and to express your interest in SaLTinNOLA.</p>
+            <button onclick="alert('https://docs.google.com/forms/d/e/1FAIpQLSf405q1vQm4gSXQIEUSI0ma5Pqz9ZoJvbpLVV20OQgM2Afb9Q/viewform')">Book  SaLTinNOLA</button>
+            <button onclick="alert('https://docs.google.com/document/d/1_jpgetU2nQbg0xcYSQ-d_YgYNm8WSJM34qGm-6dQrqM/edit')">More Information</button>
+        </div>
+    </div>
+
+    <div class="trip">
+        <img src="..." alt="Puerto Rico">
+        <div class="trip-details">
+            <h2>Puerto Rico June 16-22</h2>
+            <p>In San Juan, Puerto Rico, students will work with a leading nonprofit SBP. It stands for St. Bernard Parish, 
+                established in post-Katrina New Orleans, but the organization works to shrink the time between Disaster and 
+                Recovery all over North America. We will be working on homes still impacted by Hurricane Maria. After our 
+                days of service, we will enjoy the music, food, sights, and excitement of this beautiful island. 
+
+                Service-learning travel challenges you to get out of your comfort zone, experience a different part of the 
+                country, personally grow and reflect, and make a significant difference for others. And, you will have a great 
+                time doing it with friends - old and new!
+                
+                We are confident that this trip will challenge you to learn and grow as a person while you also serve the 
+                communities of San Juan..</p>
+            <p>Please click below for more information and to express your interest in SaLTinPuertoRico.</p>
+            <button onclick="alert('https://docs.google.com/document/d/1ynoD9TKVYwQVKwCspD-NiYy18UNeXsPFveM-ogf7SAI/edit')">More Information</button>
+            <button onclick="alert('https://docs.google.com/forms/d/e/1FAIpQLSf405q1vQm4gSXQIEUSI0ma5Pqz9ZoJvbpLVV20OQgM2Afb9Q/viewform')">Book SaLTinPuertoRico</button>
+        </div>
+    </div>
+
+    <div class="trip">
+        <img src="..." alt="Alaska">
+        <div class="trip-details">
+            <h2>Alaska July 21-27</h2>
+            <p>Our trip to Alaska provides service to the Native American Tlingit Tribe of Juneau, AK. 
+                After a day of service with the Tlingit Tribe, we will do Alaskan adventures such as 
+                hiking, kayaking, rafting, whale watching, zip lining and much more!
+
+                Service-learning travel challenges you to get out of your comfort zone, experience a 
+                different part of the country, personally grow and reflect, and make a significant 
+                difference for others. And, you will have a great time doing it with friends - old and new!
+                
+                We are confident that this trip will challenge you to learn and grow as a person while you
+                 also serve the communities of Juneau</p>
+            <p>Please click below for more information and to express your interest in SaLTinALASKA.</p>
+            <button onclick="alert('https://docs.google.com/document/d/1Dcb-Qfl2-YfLAGchfreKV-9_RTmxvd_ZLOxZbr-OeMs/edit?usp=sharing')">More Information</button>
+            <button onclick="alert('https://docs.google.com/forms/d/e/1FAIpQLSf405q1vQm4gSXQIEUSI0ma5Pqz9ZoJvbpLVV20OQgM2Afb9Q/viewform')">Book SaLTinALASKA</button>
+        </div>
+    </div>
+
+</body>
+</html>
