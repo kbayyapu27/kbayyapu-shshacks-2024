@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css">
+        <script src = "script.js"></script>
+    </head>
+    <body>
+        <ul id = "navigationBar">
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="shopDrop.html">Shop N' Drop</a></li>
+            <li><a href="love2Learn.html">Love2Learn</a></li>
+            <li><a href="takeCare.html">"Take Care" Packages</a></li>
+            <li><a href="serviceTrips.html">Service Trips</a></li>
+            <li><a href="joinSaLT.html">Join SaLT</a></li>
+        </ul>
+<!-- mission -->
+        <h1>Our Mission:</h1>
+        <h3>To create meaningful service-learning experiences 
+            that meet the needs of the local community while 
+            promoting personal growth & understanding.</h3>
+
+<!-- html photo slideshow -->
+    <!-- Slideshow -->
+        <div class="slideshow">
+            <!-- images with number & captions -->
+            <div class="slide fade">
+            <div class="text-number">1 / 3</div>
+            <img src="img1.jpg" style="width:100%">
+            <div class="caption">Caption Text</div>
+            </div>
+        
+            <div class="slide fade">
+            <div class="text-number">2 / 3</div>
+            <img src="img2.jpg" style="width:100%">
+            <div class="caption">Caption Two</div>
+            </div>
+        
+            <div class="slide fade">
+            <div class="text-number">3 / 3</div>
+            <img src="/Users/kikirdy/Pictures/Photos Library.photoslibrary/originals/D/D3A7FB2B-C248-4EEC-AA78-0F3B8C3449E7.jpeg" style="width:100%">
+            <div class="caption">Caption Three</div>
+            </div>
+        
+            <!-- previous & next buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- tags for photo location -->
+        <div style="text-align:center">
+            <span class="tag" onclick="currentSlide(1)"></span>
+            <span class="tag" onclick="currentSlide(2)"></span>
+            <span class="tag" onclick="currentSlide(3)"></span>
+        </div>
+    </body>
+</html>
