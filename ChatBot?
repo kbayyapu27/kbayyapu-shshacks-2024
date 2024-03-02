@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title> Ai chatbot </title> 
+
+        <style>
+
+            #chat-container {
+                width: 300px;
+                margin: 0 auto; 
+                border: 1px solid#ccc;
+                padding: 10px;
+            }
+            #chat-box {
+                height: 300px; 
+                margin: 0 auto; 
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                padding: 10px; 
+            }
+            #input-box {
+                width:100%;
+                padding: 5px;
+            }
+        </style> 
+    </head> 
+    <body> 
+        <div id="chat-container">
+            <div id="chat-box"></div> 
+            <input type ="text" id="input-box" placeholder="Ask a Question...">
+        </div> 
+
+
+        <script>
+            const responses = {
+            "hi": "Hello!", 
+            "how are you?": "I'm good, thank you!",
+            "what is your name?": "My name is SaLTy!",
+            "bye": "Goodbye!"
+        };
+
+        function getBotResponse(userInput) {
+            userInput = userInput.toLowerCase();
+            for(let key in responses)
+            {
+                if(userInput.includes(key))
+                {
+                    return responses[key];
+                }
+            }
+            return "Sorry, I didn't understand that.";
+        }
+        function displayUserMessage(message) {
+            const chatBox = document.getElementById("chat-box");
+            const userMessage = document.createElement("div");
+            userMessage.innerHTML = `<strong>You:</strong> ${message}`;
+            chatBox.appendChild(userMessage);
+        }
+
+        // Function to display bot message
+        function displayBotMessage(message) {
+            const chatBox = document.getElementById("chat-box");
+            const botMessage = document.createElement("div");
+            botMessage.innerHTML = `<strong>ChatBot:</strong> ${message}`;
+            chatBox.appendChild(botMessage);
+        }
+
+        // Function to handle user input
+        function handleUserInput() {
+            const inputBox = document.getElementById("input-box");
+            const userInput = inputBox.value.trim();
+
+            if (userInput !== "") {
+                displayUserMessage(userInput);
+                const botResponse = getBotResponse(userInput);
+                displayBotMessage(botResponse);
+                inputBox.value = "";
+            }
+        }
+
+        // Event listener for handling user input on pressing enter
+        document.getElementById("input-box").addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                handleUserInput();
+            }
+        });
+        </script>
+    </body>
+</html>
