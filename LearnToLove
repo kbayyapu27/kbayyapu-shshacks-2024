@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+        <title> Love2Learn </title>
+        <style> 
+
+       
+
+        body {
+            font-family: 'Gotham', sans-serif;
+            margin: 0; 
+            padding: 0; 
+        }
+
+        header { 
+            background-image: url(...);
+            background-size: cover; 
+            color: white; 
+            text-align: center; 
+            padding: 100px 0;
+        }
+
+        .container
+        {
+            max-width: 800px; 
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .services, .gallery, .about
+        {
+            padding: 20px 0; 
+            text-align: center;
+        }
+        footer
+        {
+            background-color: #333;
+            color: white; 
+            text-align: center; 
+            padding: 20px 0; 
+        }
+    </style>
+</head>
+<body> 
+
+    <header> 
+        <h1> Welcome to Learn2Love!</h1>
+    </header> 
+        
+    <div class = "container"> 
+        <section class="service">
+            <h2> Our Services </h2> 
+    <p> Love2Learn provides free, monthly, one-hour, one-on-one, 
+            math/reading tutoring and learning games for local elementary students. </p>
+        <p> Caring high school students provide the tutoring services for K-6 
+            children from the Highwood/Highland Park area. </p>
+        <div class="container">
+    <div class="serve-info">
+        <h2>Love2Learn Serves:</h2>
+        <ul>
+            <li>100% are residents of Highland Park or Highwood.</li>
+            <li>100% are low-income.</li>
+            <li>95% are of a racial minority.</li>
+            <li>All students are grades K-6.</li>
+        </ul>
+    </div>
+</div>
+       <section class="gallery"> 
+        <div class="gallery-images"> 
+            <img src="..." alt="Tutor">
+            <img src="..." alt="Tutor">
+        </div> 
+    </section> 
+
+    <footer> 
+        <p> Contact Information: PHONE NUMBER | EMAIL ADDRESS </p> 
+
+        <p> &copy; 2024 SaLT. All Rights Reserved. </p> 
+    </footer>
+
+</body>
+</html> 
