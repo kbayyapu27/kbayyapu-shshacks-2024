@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaLT Candle Store - THIS IS IT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: rgb(246,244,239);
+        }
+
+        .container {
+            background-color: rgb(221,220,209);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 50%; /* Adjust the width as needed */
+        }
+
+        img {
+            width: 400px; /* Set the image width to 400px */
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h3 {
+            color: rgb(84,82,79);
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.squarespace-cdn.com/content/v1/63a7288f367f5852e126451b/1680910834564-5M3JTZJN2NIPT3JF99N4/IMG_8004.jpg?format=1000w" alt="Candle Image">
+    <div class="container">
+        <h1><strong>THIS IS IT ~ Mango and Tangerine</strong></h1>
+        <h3>$35.00</h3>
+        <p><strong>Mango and Tangerine:</strong> An exotic fusion of ripe mango and fresh tangerine along with subtle notes of papaya, peach, and coconut to create a balanced fragrance.</p>
+        <p><strong>This is It:</strong> Live in the moment, appreciate the people and experiences around you. Whatever other worries you have can wait for later. Embrace the moment you're in!</p>
+        
+        <label for="product-dropdown">Choose a product:</label>
+        <select name="products" id="product-dropdown">
+            <option value="">Select a product...</option>
+            <option value="1">This is It ~ Matte White</option>
+            <option value="2">This is It ~ Matte Black</option>
+        </select> 
+        <button onclick="addToCart()">Add to Cart</button>
+
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: <span id="total-price">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: 'Matte White', price: 35 },
+            { id: 2, name: 'Matte Black', price: 35 },
+        ];
+        let cart = [];
+
+        function addToCart() {
+            const productId = document.getElementById('product-dropdown').value;
+            const product = products.find(p => p.id.toString() === productId);
+            if (product) {
+                cart.push(product);
+                displayCart();
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove the item at the specified index
+            displayCart(); // Update the cart display
+        }
+
+        function displayCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = ''; // Clear the cart items list
+            let total = 0;
+            cart.forEach((product, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${product.name} - $${product.price} <button onclick="removeFromCart(${index})">Remove</button>`;
+                cartItems.appendChild(li);
+                total += product.price;
+            });
+            document.getElementById('total-price').innerText = total.toFixed(2);
+        }
+
+        function checkout() {
+            console.log("Checkout clicked");
+            // move to checkout site when checkout site is made
+        }
+    </script>
+</body>
+</html>
