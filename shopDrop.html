@@ -1,8 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
-        input {
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: x-large;
+    font-style: italic;
+}
+
+#navbar {
+    background-color: #333; /* Background color for the navigation bar */
+    padding: 10px; /* Add some padding to the navigation bar */
+  }
+
+nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+li {
+    margin: 0 15px; /* Add spacing between navigation items */
+  }
+  
+.navLinks {
+    text-decoration: none;
+    color: #fff; /* Text color for the navigation items */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+  }
+  
+.navLinks:hover {
+    color: #CEC3B2; /* Change color on hover */
+  }
+
+input {
     width: 80%;
     padding: 8px;
     margin-bottom: 20px;
@@ -109,13 +157,26 @@ img {
         }
     </style>
     <title>Shop N' Drop</title>
-    <link rel="icon" href="SaltShaker.jpg"
 </head>
 <body>
+    <link rel="icon" href="SaltShaker.jpg">
+    <header id="navbar">
+        <nav>
+          <ul>
+            <li><a class = "navLinks" href="index.html">Home</a></li>
+            <li><a class = "navLinks" href="aboutUs.html">About Us</a></li>
+            <li><a class = "navLinks" href="shopDrop.html">Shop N' Drop</a></li>
+            <li><a class = "navLinks" href="love2Learn.html">Love2Learn</a></li>
+            <li><a class = "navLinks" href="takeCare.html">"Take Care" Packages</a></li>
+            <li><a class = "navLinks" href="serviceTrips.html">Service Trips</a></li>
+            <li><a class = "navLinks" href="joinSaLT.html">Get Involved</a></li>
+          </ul>
+        </nav>
+    </header>
     <center>
         <img src="https://see.fontimg.com/api/renderfont4/OV9ee/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/U2hvcCBOJyAgRHJvcA/lucy-said-ok-personal-use-italic.png" alt="Shop N' Drop Logo">
-        <h3>SaLT: Service and Learning Together</h3>
     </center>
+        <h3 class= "title">SaLT: Service and Learning Together</h3>
     <hr>
     <div class="container">
         <div>
@@ -156,7 +217,7 @@ img {
         <section id="contact">
             <br>
             <center>
-                <h2>Any Questions?</h2>
+                <h2 class="title">Any Questions?</h2>
                 <p>Feel free to get in touch with us!</p>
             </center>
             <!-- contact form -->
@@ -209,6 +270,7 @@ img {
         </div>
             <br>
             </hr>
+            <center>
             <!-- Socials-->
             <!-- Facebook icon linked to a Facebook page -->
             <a class="socials" href="https://www.facebook.com/SaLTserviceandlearningtogether" target="_blank" rel="noopener noreferrer">
@@ -224,6 +286,7 @@ img {
             <a class="socials" href="https://www.instagram.com/salt_service_learning/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-instagram"></i>
             </a>
+        </center>
         </section>
     </footer>
 </body>
