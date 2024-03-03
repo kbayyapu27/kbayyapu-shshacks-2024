@@ -16,8 +16,8 @@
     <label for="product-dropdown">Choose a product:</label>
     <select name="products" id="product-dropdown">
         <option value="">Select a product...</option>
-        <option value="1">Little by Little ~ Matte White</option>
-        <option value="2">Little by Little ~ Matte Black</option>
+        <option value="1l">Little by Little ~ Matte White</option>
+        <option value="2l">Little by Little ~ Matte Black</option>
     </select> 
     <button onclick="addToCart()">Add to Cart</button>
 
@@ -35,37 +35,58 @@
         ];
         let cart = [];
 
-        function addToCart() {
-            const productId = document.getElementById('product-dropdown').value;
-            const product = products.find(p => p.id.toString() === productId);
-            if (product) {
-                cart.push(product);
-                displayCart();
-            }
-        }
+        function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
 
-        function removeFromCart(index) {
-            cart.splice(index, 1); // Remove the item at the specified index
-            displayCart(); // Update the cart display
+    function loadCart() {
+        const savedCart = localStorage.getItem('cart');
+        if (savedCart) {
+            cart = JSON.parse(savedCart);
+            displayCart();
         }
+    }
 
-        function displayCart() {
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = ''; // Clear the cart items list
-            let total = 0;
-            cart.forEach((product, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = `${product.name} - $${product.price} <button onclick="removeFromCart(${index})">Remove</button>`;
-                cartItems.appendChild(li);
-                total += product.price;
-            });
-            document.getElementById('total-price').innerText = total.toFixed(2);
+    function addToCart() {
+        const productId = document.getElementById('product-dropdown').value;
+        const product = products.find(p => p.id.toString() === productId);
+        if (product) {
+            cart.push(product);
+            saveCart(); // Save every time an item is added
+            displayCart();
         }
+    }
 
-        function checkout() {
-            console.log("Checkout clicked");
-            // moce to checkout site when checout site is made
-        }
-    </script>
+    function removeFromCart(index) {
+        cart.splice(index, 1); // Remove item at the specified index
+        saveCart(); // Save every time an item is removed
+        displayCart();
+    }
+
+    function displayCart() {
+        const cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        let total = 0;
+        cart.forEach((product, index) => {
+            const li = document.createElement('li');
+            li.innerText = `${product.name} - $${product.price}`;
+            const removeButton = document.createElement('button');
+            removeButton.innerText = 'Remove';
+            removeButton.onclick = () => removeFromCart(index);
+            li.appendChild(removeButton);
+            cartItems.appendChild(li);
+            total += product.price;
+        });
+        document.getElementById('total-price').innerText = total.toFixed(2);
+    }
+
+    function checkout() {
+        console.log("Checkout clicked");
+        // Implement checkout logic here
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCart);
+</script>
+
 </body>
 </html>
