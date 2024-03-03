@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assume you have some CSS for styling -->
+</head>
+<body>
+
+<h1>Checkout</h1>
+
+<div id="cart-summary">
+    <h2>Order Summary</h2>
+    <ul id="summary-items">
+        <!-- Items will be populated by JavaScript -->
+    </ul>
+    <p>Total: <span id="order-total">0</span></p>
+</div>
+
+<form id="checkout-form">
+    <h2>Shipping Information</h2>
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="address" placeholder="Address" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <!-- Add more fields as necessary -->
+
+    <h2>Payment Information</h2>
+    <input type="text" id="card-number" placeholder="Card Number" required>
+    <input type="text" id="card-expiry" placeholder="Expiration Date (MM/YY)" required>
+    <input type="text" id="card-cvc" placeholder="CVC" required>
+    <!-- Add more fields as necessary -->
+
+    <button type="submit">Place Order</button>
+</form>
+
+<script src="checkout.js"></script> <!-- Link to your JavaScript file -->
+
+<!--function loadCartItems() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const summaryItems = document.getElementById('summary-items');
+    let total = 0;
+
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        summaryItems.appendChild(li);
+        total += item.price;
+    });
+
+    document.getElementById('order-total').textContent = total.toFixed(2);
+}-->
+
+<script>
+// Add event listener for form submission
+document.getElementById('checkout-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting traditionally
+
+    // Here, you would typically gather the form data
+    const formData = {
+        name: document.getElementById('name').value,
+        address: document.getElementById('address').value,
+        email: document.getElementById('email').value,
+        // Include other fields as necessary
+    };
+
+    // Validate formData here (e.g., check for empty values)
+
+    // Assuming you have an API to handle the order
+    // submitOrder(formData);
+
+    console.log('Order placed:', formData);
+    // Clear the cart
+    localStorage.removeItem('cart');
+    // Redirect to a confirmation page or display a success message
+    alert('Thank you for your order!');
+    // window.location.href = 'order-confirmation.html'; // Redirect to confirmation page
+});
+
+document.addEventListener('DOMContentLoaded', loadCartItems);
+</script>
+</body>
+</html>
