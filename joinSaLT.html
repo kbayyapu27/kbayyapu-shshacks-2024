@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - SaLT: Service and Learning Together</title>
+    <style>
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f4ef;
+        }
+
+        h1, h2 {
+            font-weight: normal;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            text-align: left;
+        }
+        input[type="text"], input[type="tel"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #c8bb9e;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(221, 220, 209);
+        }
+
+        p {
+            font-size: 25px;
+        }
+        
+        #navbar {
+    background-color: #333; /* Background color for the navigation bar */
+    padding: 10px; /* Add some padding to the navigation bar */
+  }
+  
+nav {
+    display: flex;
+    justify-content: center;
+  }
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+li {
+    margin: 0 15px; /* Add spacing between navigation items */
+  }
+  
+.navLinks {
+    text-decoration: none;
+    color: #fff; /* Text color for the navigation items */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+  }
+  
+.navLinks:hover {
+    color: #CEC3B2; /* Change color on hover */
+  }
+
+        #head {
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+          <ul>
+            <li><a class = "navLinks" href="index.html">Home</a></li>
+            <li><a class = "navLinks" href="aboutUs.html">About Us</a></li>
+            <li><a class = "navLinks" href="shopDrop.html">Shop N' Drop</a></li>
+            <li><a class = "navLinks" href="love2Learn.html">Love2Learn</a></li>
+            <li><a class = "navLinks" href="takeCare.html">"Take Care" Packages</a></li>
+            <li><a class = "navLinks" href="serviceTrips.html">Service Trips</a></li>
+            <li><a class = "navLinks" href="joinSaLT.html">Get Involved</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="container">
+        <h1 id="head">SaLT: Service and Learning Together</h1>
+        <p>Contact us to join our mission!</p>
+        <p>Email: salt@saltservice.org</p>
+        <p>Phone: 847-745-9706</p>
+        <p>Address: 1215 North Ave. Highland Park, IL 60035</p>
+        <p>SaLT is a 501(c)(3) organization. EIN: 87-1770571</p>
+        
+        <h2>Join Us!</h2>
+        <form action="#" method="POST">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
