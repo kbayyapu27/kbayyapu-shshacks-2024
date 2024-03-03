@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container { 
+            display: flex; 
+            align-items: top; 
+            justify-content: top;
+        } 
+        
+        .text {
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f5f4ef;
+        
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: auto;
+        }
+        .shop {
+            border: none;
+            width: 105%;
+            font-size: 30px;
+            text-align: left;
+        }
+        /*td {
+            padding: 5px;
+        }*/
+        
+        .contactUs {
+            padding-right: 20px;
+        }
+    </style>
+    <title>Shop N' Drop</title>
+    <link rel="icon" href="SaltShaker.jpg"
+</head>
+<body>
+    <center>
+        <img src="https://see.fontimg.com/api/renderfont4/OV9ee/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/U2hvcCBOJyAgRHJvcA/lucy-said-ok-personal-use-italic.png" alt="Shop N' Drop Logo">
+        <h3>SaLT: Service and Learning Together</h3>
+    </center>
+    <hr>
+    <div class="container">
+        <div>
+            <img src="https://images.squarespace-cdn.com/content/v1/63a7288f367f5852e126451b/a1b9bd03-26ec-4853-b33e-e948d0a32de8/IMG_4270.JPG?format=100w" alt="Shop N' Drop Image" height="300px" width="200px" />
+        </div>
+        <div class="text">
+            <p>Shop N’ Drop is dedicated to supporting local families facing food 
+                insecurity by engaging community members and fostering ongoing 
+                relationships with each supported family. Since its inception in 
+                May 2020 amidst the pandemic, Shop N’ Drop has been providing 
+                groceries and personal items biweekly to approximately 425 
+                individuals across 100+ families. What began with 25 identified 
+                families quickly grew to almost 400, all maintained through weekly 
+                conversations to understand their evolving needs and provide messages of hope.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="text">
+            <p>To strengthen connections with families, Shop N’ Drop adopts weekly themes, ranging from traditional holidays like Mother’s Day to creative ideas such as “Random Acts of Kindness”. As of January 20, their impact is remarkable: over 24,000 hours of service, 9,000+ pick-ups/deliveries, and distributing more than 30,000 bags of groceries, serving nearly 2,000 people in 529 families.</p>
+        </div>
+        <div>
+            <img src="https://images.squarespace-cdn.com/content/v1/63a7288f367f5852e126451b/8f65a69f-da68-4aa4-a9cc-78695f1204f8/Screen+Shot+2022-12-28+at+2.18.54+PM.png?format=100w" alt="Shop N' Drop Image 2" height="250px" width="200px"/>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div>
+            <img src="https://images.squarespace-cdn.com/content/v1/63a7288f367f5852e126451b/f81eb9d1-1120-475b-997e-c3cb94bd334b/IMG_4224.JPG?format=100w" alt="Shop N' Drop Image 3" height="250px" width="200px"/>
+        </div>
+        <div class="text">
+            <p>The success of Shop N’ Drop is owed to the dedication of local volunteers, businesses, and donors, for whom SaLT expresses immense gratitude on behalf of the families they support.</p>
+        </div>
+    </div>
+    <link rel = "stylesheet" type = "text/css" href = "style1.css">
+    <footer>
+        <hr>
+        <section id="contact">
+            <br>
+            <center>
+                <h2>Any Questions?</h2>
+                <p>Feel free to get in touch with us!</p>
+            </center>
+            <!-- contact form -->
+            <center>
+                <form action="process_contact.php" method="POST">
+                    <p>
+                        <span>Name:</span>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                      
+                    <p>
+                        <span>Email:</span>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+
+                    <p>
+                        <span>Message:</span>
+                        <input type="message" id="message" name="message" required>
+                    </p>
+
+                    <button class="submit" type="submit">Submit</button>
+                </form>
+            </center>
+            <!-- Contact Details -->
+            <br>
+            <hr>
+        <div class="shop">
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>Address</td>
+                    <td>Phone Number</td>
+                </tr>
+                <tr>
+                    <td class="contactUs">salt@saltservice.org</td>
+                    <td class="contactUs">11215 North Ave</td>
+                    <td class="contactUs">(847)-745-9706</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="contactUs">Highland Park, IL</td>
+                    <td class="contactUs"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="contactUs">60035</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+            <br>
+            </hr>
+            <!-- Socials-->
+            <!-- Facebook icon linked to a Facebook page -->
+            <a class="socials" href="https://www.facebook.com/SaLTserviceandlearningtogether" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook"></i>
+            </a>
+            
+            <!-- Twitter icon linked to a Twitter account -->
+            <a class="socials" href="https://twitter.com/SaLT_Service" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Instagram icon linked to a Instagram account -->
+            <a class="socials" href="https://www.instagram.com/salt_service_learning/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </section>
+    </footer>
+</body>
+</html>
