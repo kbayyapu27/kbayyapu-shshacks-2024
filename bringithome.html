@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaLT Candle Store - BRING IT HOME</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="https://images.squarespace-cdn.com/content/v1/63a7288f367f5852e126451b/1680911174611-08YDK5NMVCDX0QAZNVT7/IMG_8005.jpg?format=1000w" alt="Candle Image">
+    <h1><strong>BRING IT HOME ~ Very Vanilla</strong></h1>
+    <h3>$35.00</h3>
+    <p><strong>Very Vanilla:</strong>A classic fragrance for any room for any time of year. Notes of vanilla bean, buttercream, and cake rounded out by a hint of bourbon.</p>
+    <p><strong>Bring it Home:</strong>There's so much to learn out there in the world! Take what you've learned and bring it home, channel your passions by finding ways to make a difference in your community.</p>
+    
+    <label for="product-dropdown">Choose a product:</label>
+    <select name="products" id="product-dropdown">
+        <option value="">Select a product...</option>
+        <option value="1">Bring it Home ~ Matte White</option>
+        <option value="2">Bring it Home ~ Matte Black</option>
+    </select> 
+    <button onclick="addToCart()">Add to Cart</button>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="total-price">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: 'Matte White', price: 35 },
+            { id: 2, name: 'Matte Black', price: 35 },
+        ];
+        let cart = [];
+
+        function addToCart() {
+            const productId = document.getElementById('product-dropdown').value;
+            const product = products.find(p => p.id.toString() === productId);
+            if (product) {
+                cart.push(product);
+                displayCart();
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1); // Remove the item at the specified index
+            displayCart(); // Update the cart display
+        }
+
+        function displayCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = ''; // Clear the cart items list
+            let total = 0;
+            cart.forEach((product, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `${product.name} - $${product.price} <button onclick="removeFromCart(${index})">Remove</button>`;
+                cartItems.appendChild(li);
+                total += product.price;
+            });
+            document.getElementById('total-price').innerText = total.toFixed(2);
+        }
+
+        function checkout() {
+            console.log("Checkout clicked");
+            // moce to checkout site when checout site is made
+        }
+    </script>
+</body>
+</html>
