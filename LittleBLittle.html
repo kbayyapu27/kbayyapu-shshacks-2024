@@ -6,7 +6,7 @@
     <title>SaLT Candle Store - LITTLE BY LITTLE</title>
     <style>
         body {
-            background-color: rgb(246,244,239); /* Background color */
+            background-color: rgb(246, 244, 239); /* Background color */
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin: 0;
             padding: 0;
@@ -14,8 +14,8 @@
         }
 
         .container {
-            background-color: rgb(221,220,209); /* Background color */
-            color: rgb(84,82,79); /* Text color */
+            background-color: rgb(221, 220, 209); /* Background color */
+            color: rgb(84, 82, 79); /* Text color */
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -25,12 +25,12 @@
         }
 
         h1, h3 {
-            color: rgb(84,82,79); /* Text color */
+            color: rgb(84, 82, 79); /* Text color */
         }
 
         select, button {
-            background-color: rgb(205,195,180); /* Background color */
-            color: rgb(84,82,79); /* Text color */
+            background-color: rgb(205, 195, 180); /* Background color */
+            color: rgb(84, 82, 79); /* Text color */
             border: none;
             padding: 10px 20px;
             margin-top: 10px;
@@ -49,7 +49,7 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: rgb(84,82,79); /* Text color */
+            color: rgb(84, 82, 79); /* Text color */
         }
 
         img {
@@ -88,16 +88,16 @@
         <label for="product-dropdown">Choose a product:</label>
         <select name="products" id="product-dropdown">
             <option value="">Select a product...</option>
-            <option value="1l">Little by Little ~ Matte White</option>
-            <option value="2l">Little by Little ~ Matte Black</option>
+            <option value="1">Little by Little ~ Matte White</option>
+            <option value="2">Little by Little ~ Matte Black</option>
         </select> 
         <button onclick="addToCart()">Add to Cart</button>
 
         <div id="cart">
-            
+            <h2>Shopping Cart</h2>
             <ul id="cart-items"></ul>
             <p>Total: <span id="total-price">0</span></p>
-            <button onclick="checkout()">Checkout</button>
+            <button onclick="proceedToCheckout()" class="checkout-button">Proceed to Checkout</button>
         </div>
     </div>
 
