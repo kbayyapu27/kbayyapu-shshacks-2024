@@ -1,0 +1,68 @@
+input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+.contact-details {
+    font-size: 20px;
+}
+
+
+/*table {
+    border: none;
+    width: 105%;
+    font-size: 30px;
+    text-align: left;
+
+    
+}*/
+
+img {
+    margin: 10px;
+}
+
+.submit {
+    text-align: center;
+}
+
+.contactUs {
+    font-size: 20px;
+    width:41%;
+}
+
+/* Style for the button */
+.image-button {
+    display: inline-block;
+    position: relative;
+    padding: 0; /* Remove default padding */
+    border: none;
+    background: url('path/to/your/image.jpg') center/cover; /* Replace with your image path */
+    width: 200px; /* Set the width of the button */
+    height: 50px; /* Set the height of the button */
+    color: #fff; /* Set the text color */
+    text-align: center;
+    line-height: 50px; /* Match the height of the button for vertical alignment */
+    text-decoration: none; /* Remove default text decoration */
+}
+
+
+/* Optional hover effect */
+.image-button:hover {
+    opacity: 0.8;
+}
+
+
+/* Style for social media icons */
+.socials {
+    text-decoration: none; /* Remove default underline for links */
+    color: #333; /* Set icon color */
+    margin: 0 10px; /* Adjust spacing between icons */
+    font-size: 32px;
+  }
+  
+.socials:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
