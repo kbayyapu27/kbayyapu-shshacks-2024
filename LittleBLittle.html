@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <title>SaLT Candle Store - LITTLE BY LITTLE</title>
     <style>
         body {
-            background-color: rgb(246, 244, 239); /* Background color */
+            background-color: rgb(246, 244, 239); 
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin: 0;
             padding: 0;
@@ -14,8 +15,8 @@
         }
 
         .container {
-            background-color: rgb(221, 220, 209); /* Background color */
-            color: rgb(84, 82, 79); /* Text color */
+            background-color: rgb(221, 220, 209); 
+            color: rgb(84, 82, 79); 
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
@@ -25,12 +26,12 @@
         }
 
         h1, h3 {
-            color: rgb(84, 82, 79); /* Text color */
+            color: rgb(84, 82, 79); 
         }
 
         select, button {
-            background-color: rgb(205, 195, 180); /* Background color */
-            color: rgb(84, 82, 79); /* Text color */
+            background-color: rgb(205, 195, 180); 
+            color: rgb(84, 82, 79); 
             border: none;
             padding: 10px 20px;
             margin-top: 10px;
@@ -49,11 +50,11 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: rgb(84, 82, 79); /* Text color */
+            color: rgb(84, 82, 79); 
         }
 
         img {
-            max-width: 400px; /* Set the maximum width of the image */
+            max-width: 400px; 
             height: auto;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -91,74 +92,69 @@
             <option value="1">Little by Little ~ Matte White</option>
             <option value="2">Little by Little ~ Matte Black</option>
         </select> 
-        <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="addToCart()">Add to Cart</button>
 
-        <div id="cart">
-            <h2>Shopping Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: <span id="total-price">0</span></p>
-            <button onclick="proceedToCheckout()" class="checkout-button">Proceed to Checkout</button>
-        </div>
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="total-price">0</span></p>
+        <button onclick="redirectToCheckout()">Checkout</button>
     </div>
+    <button onclick="window.history.back();">Back</button>
 
     <script>
         const products = [
-            { id: 1, name: 'Matte White', price: 35 },
-            { id: 2, name: 'Matte Black', price: 35 },
+            { id: 1, name: 'Little by Little ~ Matte White', price: 35 },
+            { id: 2, name: 'Little by Little ~ Matte Black', price: 35 },
         ];
-        let cart = [];
-
-        function saveCart() {
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        function loadCart() {
-            const savedCart = localStorage.getItem('cart');
-            if (savedCart) {
-                cart = JSON.parse(savedCart);
-                displayCart();
-            }
-        }
+        
+        
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         function addToCart() {
             const productId = document.getElementById('product-dropdown').value;
             const product = products.find(p => p.id.toString() === productId);
             if (product) {
                 cart.push(product);
-                saveCart(); // Save every time an item is added
+                localStorage.setItem('cart', JSON.stringify(cart)); 
                 displayCart();
+                alert(`${product.name} added to the cart.`);
+            } else {
+                alert("Please select a product.");
             }
-        }
-
-        function removeFromCart(index) {
-            cart.splice(index, 1); // Remove item at the specified index
-            saveCart(); // Save every time an item is removed
-            displayCart();
         }
 
         function displayCart() {
             const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = '';
+            cartItems.innerHTML = ''; 
             let total = 0;
             cart.forEach((product, index) => {
                 const li = document.createElement('li');
-                li.innerText = `${product.name} - $${product.price}`;
+                li.textContent = `${product.name} - $${product.price}`;
                 const removeButton = document.createElement('button');
-                removeButton.innerText = 'Remove';
-                removeButton.onclick = () => removeFromCart(index);
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = () => {
+                    removeFromCart(index);
+                };
                 li.appendChild(removeButton);
                 cartItems.appendChild(li);
                 total += product.price;
             });
-            document.getElementById('total-price').innerText = total.toFixed(2);
+            document.getElementById('total-price').textContent = total.toFixed(2);
         }
 
-        function checkout() {
-            console.log("Checkout clicked");
-            // Implement checkout logic here
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart)); 
+            displayCart();
         }
 
-        document.addEventListener('DOMContentLoaded', loadCart);
+        function redirectToCheckout() {
+            window.location.href = 'checkoutPage.html'; 
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', displayCart);
     </script>
 </body>
 </html>
