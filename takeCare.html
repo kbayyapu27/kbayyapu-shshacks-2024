@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style> 
         .carousel-item img {
-    width: 100px; /* Set the desired width */
-    height: 500px; /* Set the desired height */
+    width: 50px; /* Set the desired width */
+    height: 250px; /* Set the desired height */
     overflow: hidden; /* Hide overflow if images are larger than the container */
     margin: auto;
+    text-align: center;
+}
+
+#feelFree {
+    font-size: 30px;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+}
+
+ol {
+    list-style: none;
     text-align: center;
 }
 
@@ -60,6 +74,8 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
     background-color: #f5f4ef;
+    margin: 0;
+    padding: 0;
 }
 
 .head {
@@ -85,7 +101,7 @@ input {
 
 .contactUs {
     font-size: 20px;
-    width:41%;
+    width:30%;
 }
 
 /* Style for the button */
@@ -144,11 +160,7 @@ input {
             border: none;
             width: 100%;
             font-size: 20px;
-            text-align: left;
-            padding-left: 80px;
-            padding-right: 80px;
-            padding-top: 0px;
-            padding-bottom: 0px;
+            text-align: center;
         }
 
         body {
@@ -159,6 +171,19 @@ input {
     </style>
 </head>
 <body style="background-color: #f5f4ef;">
+    <header id="navbar">
+        <nav>
+          <ul>
+            <li><a class = "navLinks" href="index.html">Home</a></li>
+            <li><a class = "navLinks" href="aboutUs.html">About Us</a></li>
+            <li><a class = "navLinks" href="shopDrop.html">Shop N' Drop</a></li>
+            <li><a class = "navLinks" href="love2Learn.html">Love2Learn</a></li>
+            <li><a class = "navLinks" href="takeCare.html">"Take Care" Packages</a></li>
+            <li><a class = "navLinks" href="serviceTrips.html">Service Trips</a></li>
+            <li><a class = "navLinks" href="joinSaLT.html">Get Involved</a></li>
+          </ul>
+        </nav>
+      </header>
     <center>
         <h1>"TAKE CARE"</h1>
         <h3>SaLT: Service and Learning Together</h3>
@@ -175,8 +200,7 @@ input {
         <div class="text">
             <center>
                 <p><strong>Each Package will include: </strong></p>
-            </center>
-            <ul>
+            <ol>
                 <li>Water</li>
                 <li>Non-perishable Food/Drink</li>
                 <li>Personal Hygiene Products</li>
@@ -186,7 +210,8 @@ input {
                 <li>Translation Guides</li>
                 <li>Emergency Kits</li>
                 <li>(Also accept gift card for groceries or/and pharmacies)</li>
-            </ul>
+            </ol>
+        </center>
         </div>
         <div>
             <img src="https://images.squarespace-cdn.com/content/v1/63a7288f367f5852e126451b/33498e5a-a988-4fb5-9153-dc15e035f0f4/16.png?format=1000w" alt="click here" height="500px" width="400px" />
@@ -198,72 +223,56 @@ input {
             <p>Drop-off locations are specified in Highland Park, Wilmete, and Winnetka. The initiative will be ongoing, with a goal of maintaining at least 200 packages available at all times.</p>
         </center>
     </div>
+    <center>
     <div class="dropoff">
-        <table border="1" >
-            <thead>
-                <tr>
-                    <th scope="col">Drop-off location in Highland Park: </th>
-                    <th scope="col">Drop-off location in Wilmete: </th>
-                    <th scope="col">Drop-off location in Winnetka: </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Highland Park City Hall</li>
-                            <li>First Bank of Highland Park</li>
-                            <li>Highland Park Bank and Trust</li>
-                            <li>Park District of Highland Park
-                                <ul>    
-                                    <li>Recreation Center of Highland Park</li>
-                                    <li>Centennial Ice Arena</li>
-                                    <li>West Ridge Center</li>
-                                    <li>Deer Creek Racquet Club</li>
-                                    <br>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>St. John's Lutheran Church, 1235 Wilmete Ave., Willmete
-                                <ul>
-                                    <li>Mon-Fri, 9am-2pm</li>
-                                </ul>
-                            </li>
-                            <li>SALT Fitness, 410 Green Bay Rd.,Kenilwoth
-                                <ul>
-                                    <li>Any Day, 8-11am</li>
-                                </ul>
-                            </li>
-                            <li>Body Science PFT, 642 Green Bay Rd., Wilmete</li>
-                            <li>North Shore Music, 405 1/2 Linden Ave., Wilmete
-                                <ul>
-                                    <li>Mon-Thru, 3-7pm</li>
-                                    <li>Fri, 3-6pm</li>
-                                    <li>Sat, 10am-2pm</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li> Winnetka Police Department</li>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>                            
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <ol>
+            <li class="title">Drop-off location in Highland Park</li>
+            <ol>
+            <li>Highland Park City Hall</li>
+            <li>First Bank of Highland Park</li>
+            <li>Highland Park Bank and Trust</li>
+            <li>Park District of Highland Park</li>
+            <ol>
+                <li>Recreation Center of Highland Park</li>
+                <li>Centennial Ice Arena</li>
+                <li>West Ridge Center</li>
+                <li>Deer Creek Racquet Club</li>
+            </ol>
+        </ol>
+        </ol>
+        <ol>
+            <li class="title">Drop-off location in Wilmete</li>
+            <ol>
+            <li>St. John's Church</li>
+                <ol>
+                    <li>1235 Wilmete Ave., Willmete</li>
+                    <li>Open: Mon-Fri, 9am-2pm</li>
+                </ol>
+            <li>SALT Fitness</li>
+                <ol>
+                    <li>410 Green Bay Rd., Kenilwoth</li>
+                    <li>Open: Any Day, 8-11am</li>
+                </ol>
+            <li>Body Science PFT</li>
+                <ol>
+                    <li>642 Green Day Rd., Wilmete</li>
+                </ol>
+            <li>North Shore Music</li>
+                <ol>
+                    <li>405 1/2 Linden Ave., Wilmete</li>
+                    <li>Open: Mon-Thru, 3-7pm; Fri, 3-6pm;
+                        Sat, 10am-2pm</li>
+                </ol>
+            </ol>
+            </ol>
+        <ol>
+            <li class="title">Drop-off location in Winnetka:</li>
+        <ol>
+            <li>Winnetka Police Department</li>
+        </ol>
+    </ol>
     </div>
+    </center>
     <hr>
     <center>
         <p>To volunteer, please fill out this form for your participation.</p>
@@ -275,10 +284,8 @@ input {
         <hr>
 <link rel = "stylesheet" type = "text/css" href = "main.css">
         <section id="contact">
-            <br>
             <center>
-                <h2>Any Questions?</h2>
-                <p>Feel free to get in touch with us!</p>
+                <p id="feelFree">Feel free to get in touch with us!</p>
             </center>
             <!-- contact form -->
             <center>
